@@ -1,0 +1,684 @@
+/* Подключение шрифтов */
+@font-face {
+  font-family: "ManropeBold";
+  src: url(../fonts/Manrope-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url(../fonts/Manrope-Regular.ttf);
+}
+
+@font-face {
+  font-family: "ManropeLight";
+  src: url(../fonts/Manrope-Light.ttf);
+}
+
+@font-face {
+  font-family: "ManropeExtraBold";
+  src: url(../fonts/Manrope-ExtraBold.ttf);
+}
+
+/* Сброс базовых стилей */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  outline: none;
+}
+
+/* Общие стили для всего приложения */
+
+body {
+  background: #031b34;
+  padding: 0 2rem;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a,
+button {
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+
+a:hover,
+button:hover {
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+
+button:hover {
+  background-color: #ae67fa;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+h1 {
+  font-size: 60px;
+  color: #ae67fa;
+}
+
+h2 {
+  font-size: 34px;
+}
+
+h1,
+h1,
+.blog__title {
+  font-family: 'ManropeExtraBold', sans-serif;
+  font-weight: 800;
+  font-size: 62px;
+  line-height: 75px;
+  letter-spacing: -0.04em;
+  max-width: 699px;
+  margin-top: 154px; /* без пробела перед px */
+
+  /* Градиент текста */
+  background: linear-gradient(90deg, #AE67FA 0%, #F49867 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  font-family: "ManropeBold", sans-serif;
+  background: linear-gradient(90deg, #ae67fa 1.84%, #f49867 102.67%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h3 {
+  font-family: "ManropeBold", sans-serif;
+  color: #fff;
+  font-size: 24px;
+}
+
+h4 {
+  font-family: "ManropeExtraBold", sans-serif;
+  color: #000;
+  font-size: 24px;
+}
+
+p {
+  font-size: 16px;
+  color: #fff;
+}
+
+.btn {
+  display: flex;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.primary-btn {
+  background-color: #ff4820;
+}
+
+.section {
+  max-width: 1169px;
+  width: 100%;
+}
+
+.lined_header {
+  background: url("../assets/img/gradient_line.svg") no-repeat 0 0 transparent;
+  padding: 1rem 0;
+}
+
+/* Стили для Шапки */
+
+.header {
+  display: flex;
+  max-width: 1169px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 2rem 0;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  background: #031b34;
+}
+
+.header .header-logo {
+  width: 162px;
+}
+
+.header .header__menu .menu {
+  display: flex;
+  column-gap: 2rem;
+}
+
+.header .header__menu .menu .menu__item a {
+  color: #fff;
+  border-bottom: 1px solid transparent;
+}
+
+.header .header__menu .menu .menu__item:hover a {
+  border-bottom-color: #fff;
+}
+
+.header .header__menu .menu .menu__item.active a {
+  color: #f49867;
+  border-bottom-color: #f49867;
+}
+
+.header .cta_buttons {
+  display: flex;
+  column-gap: 1rem;
+}
+
+/* Стили для первого экрана (Хиро секция) */
+
+.hero_section {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 1rem;
+  min-height: 60vh;
+  margin: 14rem 0 3rem;
+}
+
+.hero_section .hero_section__left {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 3rem;
+  width: 75%;
+}
+
+.hero_section .hero_section__left .left__description {
+  color: #81afdd;
+}
+
+.hero_section .hero_section__left .left__cta_buttons {
+  display: flex;
+  width: 100%;
+}
+
+.hero_section .hero_section__left .left__cta_buttons input[type="text"] {
+  min-width: 250px;
+  width: 70%;
+  padding: 8px 32px;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid #052d56;
+  border-bottom: none;
+  background-color: #052d56;
+}
+
+.hero_section .hero_section__left .left__cta_buttons .btn {
+  border-radius: 0 4px 4px 0;
+}
+
+.hero_section .hero_section__right {
+  height: 100%;
+}
+
+.hero_section .hero_section__right img {
+  width: 100%;
+}
+
+/* Секция брендов */
+
+.brands_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 6rem 0;
+  column-gap: 3rem;
+}
+
+/* Что такое Chat GPT */
+
+.what_is_chatgpt_section {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  margin: 6rem 0;
+  row-gap: 7rem;
+  background: url(../assets/img/what_is_gpt_3_bg.svg) no-repeat 0 0 / cover;
+}
+
+.what_is_chatgpt_section .what_is_chatgpt_section__top {
+  display: flex;
+}
+
+.what_is_chatgpt_section .what_is_chatgpt_section__top .top__header {
+  flex: 30%;
+}
+
+.what_is_chatgpt_section .what_is_chatgpt_section__top .top__content {
+  flex: 65%;
+  color: #81afdd;
+  font-size: 14px;
+}
+
+.what_is_chatgpt_section .what_is_chatgpt_section__middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.what_is_chatgpt_section .what_is_chatgpt_section__middle .middle__header {
+  width: 500px;
+}
+
+.what_is_chatgpt_section .what_is_chatgpt_section__middle a {
+  color: #ff8a71;
+  font-size: 16px;
+  border-bottom: 1px solid transparent;
+}
+
+.what_is_chatgpt_section .what_is_chatgpt_section__middle a:hover {
+  border-bottom: 1px solid #ff8a71;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.what_is_chatgpt_section .what_is_chatgpt_section__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  column-gap: 2rem;
+}
+
+.what_is_chatgpt_section .what_is_chatgpt_section__bottom .bottom__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.what_is_chatgpt_section
+  .what_is_chatgpt_section__bottom
+  .bottom__container
+  .container__content {
+  color: #81afdd;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* Будущее наступило */
+
+.future_here {
+  display: flex;
+  column-gap: 6rem;
+  margin: 6rem 0 2rem;
+}
+
+.future_here .future_here__left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 2rem;
+  flex: 2;
+}
+
+/* .future_here .future_here__left .left__header {
+} */
+
+.future_here .future_here__left .left__cta {
+  color: #f49867;
+  border-bottom: 1px solid transparent;
+}
+
+.future_here .future_here__left a:hover {
+  border-bottom: 1px solid #f49867;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.future_here .future_here__right {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+}
+
+.future_here .future_here__right .right__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.future_here .future_here__right .right__container .container__header {
+  width: 35%;
+}
+
+.future_here .future_here__right .right__container .container__content {
+  width: 55%;
+  color: #81afdd;
+}
+
+/* Превосходя все ожидания */
+
+.expectations {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-direction: row;
+}
+
+.expectations__image {
+  flex: 1;
+  min-height: 350px;
+}
+
+.expectations__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.expectations__top-link {
+  color: #81afdd;
+  font-size: 16px;
+  margin-bottom: 1rem;
+}
+
+.expectations__title {
+  font-size: 34px;
+  margin-bottom: 2rem;
+  max-width: 290px;
+}
+
+.expectations__description {
+  color: #81afdd;
+  font-size: 16px;
+  line-height: 2;
+  max-width: 460px;
+  margin-bottom: 2rem;
+}
+
+.expectations__bottom-link {
+  color: #ff8a71;
+  font-size: 16px;
+  border-bottom: 1px solid transparent;
+}
+
+/*Зарегистрируйтесь*/
+
+.registration-section {
+  margin-top: 8rem;
+  padding: 0 2rem;
+}
+
+.registration {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;            
+  padding: 3rem 4rem;
+  border-radius: 12px; 
+  background: url(../assets/img/backgroundreg.svg) no-repeat 0 0 / cover;
+}
+
+.registration__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.registration__top-link {
+  color: #000; 
+  font-size: 12px;
+}
+
+.registration__title {
+  font-size: 24px;
+  font-weight: 800;
+  max-width: 600px;
+}
+
+.registration__btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  white-space: nowrap; 
+}
+
+/* ========================
+   Стили для Блога
+======================== */
+
+.blog-section {
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+}
+
+.blog__container {
+  display: flex;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.blog__card {
+  background: #042c54;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.blog__card:hover {
+  transform: translateY(-5px);
+}
+
+.blog__card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.blog__card-content {
+  padding: 1.5rem 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.blog__card-date {
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.blog__card-title {
+  font-size: 19px;
+  line-height: 30px;
+  color: #fff;
+  margin-top: 0.75rem;
+  font-family: "ManropeExtraBold", sans-serif;
+}
+
+.blog__card-link {
+  font-size: 12px;
+  color: #fff;
+  margin-top: 2rem;
+  display: inline-block;
+  opacity: 0.8;
+}
+
+.blog__card-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* Левая большая карточка */
+.blog__card--large {
+  flex: 1;
+}
+
+.blog__card--large .blog__card-title {
+  font-size: 25px;
+  line-height: 30px;
+}
+
+/* Правая сетка 2x2 */
+.blog__grid {
+  flex: 1.25;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.footer {
+  width: 100%;
+  max-width: 1169px;
+  margin-top: 6rem;
+  padding: 4rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__contacts {
+  max-width: 134px;            /* ширина блока из Figma */
+}
+
+.footer__heading {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.footer__title {
+  font-family: "ManropeExtraBold", sans-serif;
+  font-size: 62px;
+  line-height: 75px;
+  letter-spacing: -0.04em;
+  max-width: 850px;
+  margin: 0 auto 3rem;
+  background: linear-gradient(90deg, #AE67FA 0%, #F49867 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer__btn {
+  display: inline-block;
+  padding: 1.2rem 2.5rem;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.footer__btn:hover {
+  background: #fff;
+  color: #031b34;
+}
+
+.footer__links {
+  display: flex;
+  justify-content: flex-start; 
+  column-gap: 141px;         
+  row-gap: 3rem;
+  width: 100%;
+  margin-bottom: 5rem;
+  flex-wrap: wrap;
+}
+
+.footer__links-logo {
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+  gap: 1.5rem;
+}
+
+.footer__links-logo img {
+  width: 118px;
+}
+
+.footer__links-logo p {
+  font-size: 12px;
+  line-height: 15px;
+  color: #fff;
+}
+
+.footer__links-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.footer__links-group h4 {
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.footer__links-group a,
+.footer__links-group p {
+  font-size: 12px;
+  line-height: 15px;
+  color: #fff;
+  opacity: 0.85;
+}
+
+.footer__links-group a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.footer__copyright {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.footer__copyright p {
+  font-size: 12px;
+  color: #fff;
+}
+
+
+
+/* Медиа запросы для адаптива */
+
+@media screen and (max-width: 1024px) {
+  .header {
+    flex-direction: column;
+  }
+}
